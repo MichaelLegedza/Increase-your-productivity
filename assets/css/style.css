@@ -80,10 +80,10 @@ a {
 .footer span{
     display: flex;
     justify-content: center;
-    padding-bottom: 10px;
     font-family: "Quicksand", sans-serif;
-    font-size: 12px;
+    font-size: 8px;
     color: #AEB8D0;
+    padding: 25px 70px;
 }
 
 .navigation, .icons {
@@ -1322,6 +1322,7 @@ input {
 @media screen and (min-width: 992px) {
     .footer span{
         display: inline-block;
+        font-size: 12px;
     }
 }
 
