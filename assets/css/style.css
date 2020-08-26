@@ -68,7 +68,6 @@ a {
 .header, .footer {
     background-color: #fff;
     border-bottom: 1px solid #D8E3FE;
-    padding: 0px 20px;
 }
 
 .block__header,.block__footer {
@@ -94,13 +93,19 @@ a {
     font-family: "Quicksand", sans-serif;
     font-weight: 500;
 }
+.icons {
+    margin-bottom: 15px;
+}
 
 .navigation__link  {
-    font-size: 12px;
+    font-size: 14px;
     display: inline-block;
     margin-right: 42px;
     color: #697CA6;
     text-shadow: 0px 0px 5px #E6E6E6;
+}
+.navigation__link:first-child {
+    margin-right: 58px;
 }
 .navigation__link:last-child {
     margin: 0px;
@@ -129,7 +134,7 @@ a {
 .icons__link--2 {
     background: url('../img/telegram.svg') no-repeat;
     width: 14.7px;
-    height: 11.79px;
+    height: 13px;
 }
 .icons__link--2:hover {
     background: url('../img/telegram-hover.svg') no-repeat;
@@ -139,7 +144,7 @@ a {
 .icons__link--3 {
     background: url('../img/twitter.svg') no-repeat;
     width: 16.51px;
-    height: 13.78px;
+    height: 14px;
 }
 .icons__link--3:hover {
     background: url('../img/twitter-hover.svg') no-repeat;
@@ -148,7 +153,7 @@ a {
 .icons__link--4 {
     background: url('../img/m.svg') no-repeat;
     width: 16.51px;
-    height: 12.86px;    
+    height: 13px;    
 }
 .icons__link--4:hover {
     background: url('../img/m-hover.svg') no-repeat;
@@ -173,13 +178,20 @@ a {
 
 /* S.1 adaptive */
 
+
+/* >486px */
+@media screen and (min-width: 486px) {
+    .navigation__link:first-child {
+        margin-right: 40px;
+    }
+}
 /* <992px */
 @media screen and (max-width: 992px) {
     .navigation {
         margin-bottom: 15px;
     }
     .navigation__link {
-        font-size: 10px;
+        font-size: 14px;
         padding: 5px 0px;
         margin-right: 40px;
     }
@@ -202,8 +214,11 @@ a {
     .navigation {
         margin-bottom: 0px;
     }
+    .icons {
+        margin-bottom: 0px;
+    }
     .navigation__link {
-        font-size: 12px;
+        font-size: 14px;
         padding: 0px;
         margin-right: 42px;
     }
@@ -230,8 +245,8 @@ a {
     display: flex;
     flex-direction: column;
     margin: -4px auto 0px;
-    max-width: 1441px;
-    min-height: 570px;
+    background-size: cover;
+    background-position: bottom center;
     background: url('../img/backproduct.svg') no-repeat;
 }
 .block__productivity {
@@ -415,7 +430,7 @@ a {
     padding: 0px 20px;
     display: flex;
     justify-content: flex-end;
-    margin: 110px 0px;
+    padding: 110px 20px;
 }
 .plan__images {
     width: 235.58px;
@@ -491,9 +506,6 @@ a {
 
 /* >768px */
 @media screen and (min-width: 768px) {
-    .plan__manage {
-        flex-direction: column;
-    }
     .plan .title {
         font-size: 10px;
     }
@@ -556,18 +568,19 @@ a {
 /*----- About -----*/
 
 .about {
-    max-width: 1440px;
     display: flex;
     align-items: center;
     background: url(../img/clouds.svg) no-repeat;
+    background-size: cover;
+    background-position: bottom center;
     margin: 0 auto;
     padding: 0px 20px;
 }
 .about__as {
-    margin-bottom: 92px;
+    margin-bottom: 50px;
 }
 .about__as .title {
-    margin-top: 30px;
+    margin-top: 50px;
 }
 .about .subtitle {
     font-size: 24px;
@@ -578,7 +591,7 @@ a {
     flex-direction: column;
     justify-content: space-between;
     max-width: 761px;
-    margin: 0 auto 92px;
+    margin: 0 auto 25px;
     align-items: center;
 }
 
@@ -660,6 +673,7 @@ a {
     .about__app {
         flex-direction: row;
         justify-content: space-between;
+        margin: 0 auto 92px;
     }
     .about__as .title {
         margin-top: 0px;
@@ -676,7 +690,7 @@ a {
         font-size: 16px;
     }
     .card__description {
-        font-size: 14px;
+        font-size: 11px;
     }
     .about__buttons {
         margin-bottom: 0px;
@@ -690,15 +704,15 @@ a {
     .about {
         padding: 170px 20px;
     }
+    .about__as {
+        margin-bottom: 92px;
+    }
 }
 /* S.5 adaptive end */
 
 
 /*----- Stats -----*/
 
-.stats {
-    
-}
 .stats__block {
     display: flex;
     flex-direction: row;
@@ -1181,15 +1195,17 @@ details[open] summary span {
 /*----- Get-started -----*/
 
 .get-started {
-    background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);;
+    background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
 }
 .block__get-started {
+    background-image: url('../img/clouds-start.svg');
+    background-position: bottom center;
+    background-size: cover;
     padding: 90px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url('../img/clouds-start.svg');
 }
 .get-started .title, .get-started .subtitle, .get-started .description {
     color: #fff;
@@ -1213,6 +1229,9 @@ details[open] summary span {
     color: #C7D3FF;
     border: 1px solid #A0B4FF;
     border-radius: 2px;
+}
+.btn--get-started-2 {
+    margin-right: 0px;
 }
 .btn--get-started:hover {
     color: #6480E8;
@@ -1276,7 +1295,7 @@ input {
     color: #7A85AD;
 }
 .e-mail {
-    margin: 0px 20px 20px 0px;
+    margin: 15px auto;
     background: #EFEFF7;
     padding: 20px 50px 20px 20px;
 }
